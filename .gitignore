@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.log
+
+# Virtual environments
+.env/
+.venv/
+venv/
+env/
+
+# Model weights and checkpoints
+*.safetensors
+*.bin
+*.pt
+vit-plantdisease/
+checkpoint-*/
+
+# Datasets and cached data
+plantdisease/
+model_training/plantdisease/
+model_training/hf_cache/
+input_images/
+processed_images/
+
+# ESP32 / runtime files
+ESP32/status.txt
+esp32_response.html
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
