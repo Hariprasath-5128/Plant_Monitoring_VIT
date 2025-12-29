@@ -105,7 +105,7 @@ python ESP32/espcode.py
 
 Open the ESP32 IP (shown in Serial Monitor) in a browser and trigger `/capture`. The script downloads the images, runs inference, and updates both the Flask server and the ESP32 LCD with the health status.
 
-## Hugging Face model upload
+## Hugging Face model upload - (directly load the pre-trained model)
 
 To share the fine‑tuned ViT model:
 
@@ -129,3 +129,9 @@ model = ViTForImageClassification.from_pretrained(MODEL_ID)
 processor = ViTImageProcessor.from_pretrained(MODEL_ID)
 
 Now others only need your GitHub repo and the Hugging Face model name to run the system.
+
+
+## ORDER (to run):
+1. First, run the ESP code (esp32_cam_plant_monitor.ino) and press RESET button on that ESP32-CAM
+2. Then, place the ESP32-CAM in a proper place to capture the leaf in proper position.
+3. At last, run the code - (espcode.py) and you will see the summary of the output in the terminal
